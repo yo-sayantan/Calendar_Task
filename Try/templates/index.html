@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Task Organizer</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Add Task and Invites</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('add_event')}}"method="post">
+      <input type="text" name="summary" placeholder="Summary" required="required"/>
+      <input type="date" name="date" placeholder="Date" required="required"/>
+      <input type="time" name="start" placeholder="Start Time" required="required" />
+      <input type="time" name="end" placeholder="End Time" required="required" />
+      <!-- <input type="number" name="end" placeholder="No of invitees" required="required" /> -->
+		  <input type="email" name="invite1" placeholder="1st Invite" required="required" />
+      <input type="email" name="invite2" placeholder="2nd Invite" />
+      <input type="email" name="invite3" placeholder="3rd Invite" />
+      <!-- <input type="email" name="invite4" placeholder="4th Invite" />
+      <input type="email" name="invite5" placeholder="5th Invite" /> -->
+      <input type="text" name="description" placeholder="Description"/>
+      <input type="location" name="location" placeholder="Location"/>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Add Event</button>
+    </form>
+
+   <br>
+   {{ result_text }}
+
+ </div>
+
+
+</body>
+</html>
