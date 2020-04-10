@@ -1,3 +1,10 @@
+##################################################
+## Author: {Sayantan Biswas}
+## Maintainer: {Sayantan Biswas}
+## Email: {sayantanbiswas1002@gmail.com}
+##################################################
+
+
 import json, pickle
 import numpy as np
 import os.path
